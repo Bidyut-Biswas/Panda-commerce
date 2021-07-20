@@ -23,6 +23,22 @@
     ul li a:hover{
         color: white !important;
     }
+    input:focus{
+        outline: none;
+    }
+    .search-icon{
+        cursor: pointer;
+    }
+    .own-bg-color{
+        background: linear-gradient(tomato,salmon);
+    }
+    .img-catagory,.slides{
+        transition: 0.5s;
+    }
+    .img-catagory:hover,.slides:hover{
+        transform: scale(1.1);
+    }
+    
 </style>
 <body>
 
@@ -42,10 +58,12 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <form class="d-flex  w-50">                  
-                        <input class="form-control ms-lg-5 px-3 py-2 rounded-pill" type="search" placeholder="Search" aria-label="Search">
-                        <i class="fas fa-search d-flex align-items-center text-muted ms-2">
-                        </i>                  
+                    <form class="w-50">                  
+                       <div class="d-flex justify-content-between ms-lg-5 px-2 py-1 border border-2 rounded-pill  w-100 ">
+                        <input class="form border-0 w-100 px-3 py-1 bg-light" type="search" placeholder="Search" aria-label="Search">
+                        <i class="fas fa-search d-flex align-items-center text-muted ms-2 search-icon">
+                        </i>
+                       </div>                  
                     </form>
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item">
@@ -71,9 +89,9 @@
             <section class="container my-4">
                 <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-indicators">
-                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active bg-primary" aria-current="true" aria-label="Slide 1"></button>
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" class=" bg-primary" aria-label="Slide 2"></button>
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" class=" bg-primary" aria-label="Slide 3"></button>
                     </div>
                     <div class="carousel-inner bgc">
                       <div class="carousel-item active">
@@ -123,7 +141,7 @@
                       </div>
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="carousel-control-prev-icon " aria-hidden="true"></span>
                       <span class="visually-hidden">Previous</span>
                     </button>
                     <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
@@ -144,21 +162,21 @@
                 <div class="catagories">
                     <div class="row">
                         <div class="col-md-4 mb-2">
-                            <div class="p-4 rounded-2 d-flex align-items-center bg-success justify-content-between">
+                            <div class="p-4 rounded-2 d-flex align-items-center own-bg-color justify-content-between">
                                 <h1>Watch</h1>
-                                <img class="w-25" src="images/categories/watch.png" alt="">
+                                <img class="w-25 img-catagory" src="images/categories/watch.png" alt="">
                             </div>
                         </div>
                         <div class="col-md-4 mb-2">
                             <div class="p-4 rounded-2 d-flex align-items-center bg-primary justify-content-between">
                                 <h1>Bag</h1>
-                                <img class="w-25" src="images/categories/bag.png" alt="">
+                                <img class="w-25 img-catagory" src="images/categories/bag.png" alt="">
                             </div>
                         </div> 
                          <div class="col-md-4 mb-2">
                             <div class="p-4 rounded-2 d-flex align-items-center bg-secondary justify-content-between">
                                 <h1>Shoes</h1>
-                                <img class="w-25" src="images/categories/shoes.png" alt="">
+                                <img class="w-25 img-catagory" src="images/categories/shoes.png" alt="">
                             </div>
                          </div>   
                             
@@ -175,7 +193,7 @@
                     <a class="text-warning text-decoration-none fs-4" href="">See All</a>
                 </div>
                 <div class="row my-2 py-4">
-                    <div class="col-md-4">
+                    <div class="col-md-4 slides">
                         <div>
                             <div class="card mb-2">
                                 <img src="images/shoes/shoe-1.png" class="card-img-top" alt="...">
@@ -190,7 +208,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-4 slides">
                         <div>
                             <div class="card mb-2">
                                 <img src="images/shoes/shoe-2.png" class="card-img-top" alt="...">
@@ -205,7 +223,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-4 slides">
                         <div>
                             <div class="card mb-2">
                                 <img src="images/shoes/shoe-3.png" class="card-img-top" alt="...">
@@ -232,7 +250,7 @@
                     <a class="text-warning text-decoration-none fs-4" href="">See All</a>
                 </div>
                 <div class="row my-2 py-4">
-                    <div class="col-md-4">
+                    <div class="col-md-4 slides">
                         <div>
                             <div class="card mb-2">
                                 <img src="images/bags/bag-1.png" class="card-img-top" alt="...">
@@ -247,7 +265,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-4 slides">
                         <div>
                             <div class="card mb-2">
                                 <img src="images/bags/bag-2.png" class="card-img-top" alt="...">
@@ -262,7 +280,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-4 slides">
                         <div>
                             <div class="card mb-2">
                                 <img src="images/bags/bag-3.png" class="card-img-top" alt="...">
